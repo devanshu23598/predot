@@ -10,6 +10,7 @@ const members = require('./api/routes/members');
 const books = require('./api/routes/books');
 const training = require('./api/routes/training');
 const bookmarks = require('./api/routes/bookmarks');
+const reviews = require('./api/routes/reviews');
 
 // Database Connectivity
 mongoose.connect('mongodb://localhost:27017/bookrecommendation', {
@@ -36,6 +37,7 @@ app.use('/members', members);
 app.use('/books', books);
 app.use('/training', training);
 app.use('/bookmarks', bookmarks);
+app.use('/reviews', reviews);
 app.get("/uploads/:path", (req, res) => {
     res.sendFile(path.join(__dirname, './uploads/'+req.params.path));
 });

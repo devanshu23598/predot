@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Reviews = require('./../models/reviews');
 
 // Helpers
-const validateBookId = require('validateBookId');
+const validateBookId = require('./../helpers/validate_book_id');
 
 exports.addReview = (req, res) => {
     const reviews = new Reviews({

@@ -12,7 +12,8 @@ const reviews = mongoose.Schema({
     },
     member_id: {
         type: mongoose.Schema.Types.ObjectId,
-        required: [true, 'Member ID is required']
+        required: [true, 'Member ID is required'],
+        ref: 'Members'
     }
 });
 
