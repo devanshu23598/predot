@@ -1,0 +1,33 @@
+{"_id":{"$oid":"5c56d7a643dbba10e45eb003"},"category_name":"Art","__v":0}
+{"_id":{"$oid":"5c56d7b443dbba10e45eb004"},"category_name":"Biography","__v":0}
+{"_id":{"$oid":"5c56d7bc43dbba10e45eb005"},"category_name":"Business","__v":0}
+{"_id":{"$oid":"5c56d7c643dbba10e45eb006"},"category_name":"Classics","__v":0}
+{"_id":{"$oid":"5c56d7cc43dbba10e45eb007"},"category_name":"Comics","__v":0}
+{"_id":{"$oid":"5c56d7d843dbba10e45eb008"},"category_name":"Crime","__v":0}
+{"_id":{"$oid":"5c56d7e043dbba10e45eb009"},"category_name":"Fantasy","__v":0}
+{"_id":{"$oid":"5c56d7e943dbba10e45eb00a"},"category_name":"Fiction","__v":0}
+{"_id":{"$oid":"5c56d7f143dbba10e45eb00b"},"category_name":"Historical Fiction","__v":0}
+{"_id":{"$oid":"5c56d7f943dbba10e45eb00c"},"category_name":"History","__v":0}
+{"_id":{"$oid":"5c56d80043dbba10e45eb00d"},"category_name":"Horror","__v":0}
+{"_id":{"$oid":"5c56d80b43dbba10e45eb00e"},"category_name":"Humor","__v":0}
+{"_id":{"$oid":"5c56d81543dbba10e45eb00f"},"category_name":"Mystery","__v":0}
+{"_id":{"$oid":"5c56d82243dbba10e45eb010"},"category_name":"Philosophy","__v":0}
+{"_id":{"$oid":"5c56d82b43dbba10e45eb011"},"category_name":"Poetry","__v":0}
+{"_id":{"$oid":"5c56d83543dbba10e45eb012"},"category_name":"Psychology","__v":0}
+{"_id":{"$oid":"5c56d83f43dbba10e45eb013"},"category_name":"Religion","__v":0}
+{"_id":{"$oid":"5c56d84543dbba10e45eb014"},"category_name":"Romance","__v":0}
+{"_id":{"$oid":"5c56d84b43dbba10e45eb015"},"category_name":"Science","__v":0}
+{"_id":{"$oid":"5c56d85143dbba10e45eb016"},"category_name":"Science Fiction","__v":0}
+{"_id":{"$oid":"5c56d85943dbba10e45eb017"},"category_name":"Suspense","__v":0}
+{"_id":{"$oid":"5c56d86143dbba10e45eb018"},"category_name":"Spirituality","__v":0}
+{"_id":{"$oid":"5c56d86a43dbba10e45eb019"},"category_name":"Sports","__v":0}
+{"_id":{"$oid":"5c56d87343dbba10e45eb01a"},"category_name":"Thriller","__v":0}
+{"_id":{"$oid":"5c56d87b43dbba10e45eb01b"},"category_name":"Travel","__v":0}
+{"_id":{"$oid":"5c56d88443dbba10e45eb01c"},"category_name":"Young Adult","__v":0}
+{"_id":{"$oid":"5c57e3f6d69ddb0277d63cfd"},"category_name":"Chick Lit","__v":0}
+{"_id":{"$oid":"5c57e402d69ddb0277d63cfe"},"category_name":"Childrens","__v":0}
+{"_id":{"$oid":"5c57e467d69ddb0277d63cff"},"category_name":"Christian","__v":0}
+{"_id":{"$oid":"5c57e47dd69ddb0277d63d02"},"category_name":"Contemporary","__v":0}
+{"_id":{"$oid":"5c57e483d69ddb0277d63d03"},"category_name":"Cookbooks","__v":0}
+{"_id":{"$oid":"5c57e49cd69ddb0277d63d06"},"category_name":"Nonfiction","__v":0}
+{"_id":{"$oid":"5c57e4ded69ddb0277d63d0d"},"category_name":"Paranormal","__v":0}

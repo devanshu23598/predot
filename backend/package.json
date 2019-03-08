@@ -1,0 +1,38 @@
+{
+  "name": "bookrecommendation",
+  "version": "1.0.0",
+  "description": "Book Recommendation System with Brain.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/hackathon_personal/bookrecommendation.git"
+  },
+  "keywords": [
+    "BookRecommendation",
+    "System"
+  ],
+  "author": "Rupider Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/hackathon_personal/bookrecommendation/issues"
+  },
+  "homepage": "https://gitlab.com/hackathon_personal/bookrecommendation#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "brain.js": "^1.6.1",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.8",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "node-fetch": "^2.3.0",
+    "nodemon": "^1.18.9",
+    "otp-generator": "^1.1.0",
+    "password-hash": "^1.2.2",
+    "socket.io": "^2.2.0",
+    "uniqid": "^5.0.3"
+  }
+}
