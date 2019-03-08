@@ -17,4 +17,11 @@
       + Search System
       + Book Rating System for Users
       + Integrate concept of Machine Learning
-  
+  3. Frontend Developmemt
+      + Login Screen
+      + Signup Screen
+      + Home Screen
+      + Category List
+      + Single Book View
+      + Bookmarks Screen
+      + Search Screen
