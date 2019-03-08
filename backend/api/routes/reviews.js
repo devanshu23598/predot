@@ -8,5 +8,6 @@ const reviews = require('./../controllers/reviews');
 const checkAuth = require('./../middlewares/check_auth');
 
 router.post('/add', checkAuth, reviews.addReview);
+router.post('/get', checkAuth, reviews.getReviews);
 
 module.exports = router;
