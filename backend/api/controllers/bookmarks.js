@@ -29,6 +29,25 @@ exports.getBooks = (req, res) => {
     })
 }
 
+exports.checkBookmark = (req, res) => {
+    Bookmarks.countDocuments({
+        book_id: req.body.book_id,
+        member_id: req.authData.member_id
+    }).exec().then(result => {
+        if (result > 0) {
+            res.status(200).json({
+                response: true,
+                msg: 'Bookmarked'
+            });
+        } else {
+            res.status(404).json({
+                response: false,
+                msg: 'Not Bookmarked Yet'
+            })
+        }
+    })
+}
+
 exports.addBook =  (req, res) => {
     Bookmarks.findOne({
         book_id: req.body.book_id,
@@ -39,8 +58,9 @@ exports.addBook =  (req, res) => {
                 book_id: req.body.book_id,
                 member_id: req.authData.member_id
             }).exec().then(result => {
-                res.status(500).json({
+                res.status(202).json({
                     response: true,
+                    deleted: true,
                     msg: 'Book removed from your bookmark list.'
                 });
             }).catch(err => {
@@ -59,6 +79,7 @@ exports.addBook =  (req, res) => {
                 bookmarks.save().then(result => {
                     res.status(201).json({
                         response: true,
+                        deleted: false,
                         msg: 'Book added to your bookmark list.'
                     });
                 }).catch(err => {
