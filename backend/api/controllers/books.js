@@ -189,7 +189,7 @@ updateBookRating = (req, res) => {
                         member_id: req.authData.member_id
                     }).exec().then(result => {
                         if (result >= 8) {
-                            const io = req.app.get('socketio'); // Socket.io Object
+                            const io = req.app.get('io'); // Socket.io Object
                             // Socket.io - Connection Event - Start
                             io.emit('fetch_recommended_books');
                             // Socket.io - Connection Event - End
@@ -240,7 +240,6 @@ addBookRating = (req, res) => {
             $inc: {book_rating_count: 1, book_rating: training.book_rating },
          }).exec().then(update => {
             Books.findOne({_id: training.book_id}).select('book_rating_count').exec().then(result => {
-                const io = req.app.get('socketio'); // Socket.io Object
                 if (result.book_rating_count > 1) {
                     Books.updateOne({_id: training.book_id}, {
                         $mul: {book_rating: 0.5 },
@@ -249,7 +248,7 @@ addBookRating = (req, res) => {
                             member_id: req.authData.member_id
                         }).exec().then(result => {
                             if (result >= 8) {
-                                const io = req.app.get('socketio'); // Socket.io Object
+                                const io = req.app.get('io'); // Socket.io Object
                                 // Socket.io - Connection Event - Start
                                 io.emit('fetch_recommended_books');
                                 // Socket.io - Connection Event - End
@@ -270,7 +269,7 @@ addBookRating = (req, res) => {
                         member_id: req.authData.member_id
                     }).exec().then(result => {
                         if (result >= 8) {
-                            const io = req.app.get('socketio'); // Socket.io Object
+                            const io = req.app.get('io'); // Socket.io Object
                             // Socket.io - Connection Event - Start
                             io.emit('fetch_recommended_books');
                             // Socket.io - Connection Event - End

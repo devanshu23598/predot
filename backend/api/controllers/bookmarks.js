@@ -59,7 +59,7 @@ exports.addBook =  (req, res) => {
                 member_id: req.authData.member_id
             }).exec().then(result => {
                 if (req.body.socket === true) {
-                    const io = req.app.get('socketio'); // Socket.io Object
+                    const io = req.app.get('io'); // Socket.io Object
                     // Socket.io - Connection Event - Start
                     io.emit('fetch_bookmark');
                     // Socket.io - Connection Event - End
