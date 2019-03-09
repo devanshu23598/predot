@@ -58,6 +58,12 @@ exports.addBook =  (req, res) => {
                 book_id: req.body.book_id,
                 member_id: req.authData.member_id
             }).exec().then(result => {
+                if (req.body.socket === true) {
+                    const io = req.app.get('socketio'); // Socket.io Object
+                    // Socket.io - Connection Event - Start
+                    io.emit('fetch_bookmark');
+                    // Socket.io - Connection Event - End
+                }
                 res.status(202).json({
                     response: true,
                     deleted: true,
@@ -77,6 +83,12 @@ exports.addBook =  (req, res) => {
                     member_id: req.authData.member_id
                 });
                 bookmarks.save().then(result => {
+                    if (req.body.socket === true) {
+                        const io = req.app.get('socketio'); // Socket.io Object
+                        // Socket.io - Connection Event - Start
+                        io.emit('fetch_bookmark');
+                        // Socket.io - Connection Event - End
+                    }
                     res.status(201).json({
                         response: true,
                         deleted: false,

@@ -6,5 +6,6 @@ const server = http.createServer(app).listen(port);
 
 const io = require('socket.io')(server);
 io.on('connection', socket => {
+    app.set('io', io);
     app.set('socketio',socket);
 });

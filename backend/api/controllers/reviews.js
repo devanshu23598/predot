@@ -18,9 +18,9 @@ exports.addReview = (req, res) => {
             Reviews.findOne({
               _id: result._id  
             }).populate('member_id').exec().then(review => {
-                const io = req.app.get('socketio'); // Socket.io Object
+                const io = req.app.get('io'); // Socket.io Object
                 // Socket.io - Connection Event - Start
-                io.broadcast.emit('fetch_real_time_reviews', review);
+                io.emit('fetch_reviews', review);
                 // Socket.io - Connection Event - End
                 res.status(200).json({
                     response: true,
