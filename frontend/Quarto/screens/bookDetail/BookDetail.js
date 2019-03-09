@@ -162,11 +162,6 @@ export default class BookDetail extends Component {
             this.myBookmark();
         })
     }
-    componentWillUnmount() {
-        this.state.socketio.disconnect();
-
-
-    }
     render() {
         return (
             <SafeAreaView style={{ flex: 1 }}>
