@@ -185,10 +185,16 @@ updateBookRating = (req, res) => {
                 Books.updateOne({_id: req.body.book_id}, {
                     $mul: {book_rating: 0.5 },
                  }).exec().then(update => {
-                    const io = req.app.get('socketio'); // Socket.io Object
-                    // Socket.io - Connection Event - Start
-                    io.emit('fetch_recommended_books');
-                    // Socket.io - Connection Event - End
+                    Training.countDocuments({
+                        member_id: req.authData.member_id
+                    }).exec().then(result => {
+                        if (result >= 8) {
+                            const io = req.app.get('socketio'); // Socket.io Object
+                            // Socket.io - Connection Event - Start
+                            io.emit('fetch_recommended_books');
+                            // Socket.io - Connection Event - End
+                        }
+                    });
                     res.status(200).json({
                         response: true,
                         msg: 'Book Rating Updated!!'
@@ -239,9 +245,16 @@ addBookRating = (req, res) => {
                     Books.updateOne({_id: training.book_id}, {
                         $mul: {book_rating: 0.5 },
                      }).exec().then(update => {
-                        // Socket.io - Connection Event - Start
-                        io.emit('fetch_recommended_books');
-                        // Socket.io - Connection Event - End
+                        Training.countDocuments({
+                            member_id: req.authData.member_id
+                        }).exec().then(result => {
+                            if (result >= 8) {
+                                const io = req.app.get('socketio'); // Socket.io Object
+                                // Socket.io - Connection Event - Start
+                                io.emit('fetch_recommended_books');
+                                // Socket.io - Connection Event - End
+                            }
+                        });
                         res.status(200).json({
                             response: true,
                             msg: 'Book Rated!!'
@@ -253,9 +266,16 @@ addBookRating = (req, res) => {
                         });
                      });
                 } else {
-                    // Socket.io - Connection Event - Start
-                    io.emit('fetch_recommended_books');
-                    // Socket.io - Connection Event - End
+                    Training.countDocuments({
+                        member_id: req.authData.member_id
+                    }).exec().then(result => {
+                        if (result >= 8) {
+                            const io = req.app.get('socketio'); // Socket.io Object
+                            // Socket.io - Connection Event - Start
+                            io.emit('fetch_recommended_books');
+                            // Socket.io - Connection Event - End
+                        }
+                    });
                     res.status(200).json({
                         response: true,
                         msg: 'Book Rated!!'
